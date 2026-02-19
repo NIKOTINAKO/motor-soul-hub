@@ -78,8 +78,8 @@ const Index = () => {
 
       {/* ── NAV ── */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 md:px-14 bg-primary/95 backdrop-blur-md border-b border-primary-muted/40">
-        <span className="font-display text-xl font-bold tracking-wider text-primary-foreground">
-          INVER<span className="text-accent">AMOTORS</span>
+        <span className="font-display text-xl font-bold tracking-wider">
+          <span className="text-accent">INVERA</span><span className="text-primary-foreground">MOTORS</span>
         </span>
         <a
           href="mailto:contacto@inveramotors.com"
@@ -235,8 +235,8 @@ const Index = () => {
       <footer className="bg-primary text-primary-foreground py-12 px-6 md:px-14">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
-            <p className="font-display text-lg font-bold tracking-wider text-primary-foreground mb-1">
-              INVER<span className="text-accent">AMOTORS</span>
+            <p className="font-display text-lg font-bold tracking-wider mb-1">
+              <span className="text-accent">INVERA</span><span className="text-primary-foreground">MOTORS</span>
             </p>
             <p className="text-primary-foreground/55 text-sm">Intermediación de venta de vehículos</p>
           </div>
