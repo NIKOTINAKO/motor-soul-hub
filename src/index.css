@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,62 +6,53 @@
 
 @layer base {
   :root {
-    /* Base — white page */
-    --background: 0 0% 98%;
-    --foreground: 142 32% 12%;
+    /* White base */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
 
-    --card: 142 20% 96%;
-    --card-foreground: 142 32% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
 
-    --popover: 0 0% 98%;
-    --popover-foreground: 142 32% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
 
-    /* Dark corporate green #1f3d2b ≈ hsl(142 32% 18%) */
-    --primary: 142 32% 18%;
-    --primary-foreground: 0 0% 98%;
+    /* Dark forest green #0B3D2E ≈ hsl(160 69% 14%) */
+    --primary: 160 69% 14%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Olive green accent */
-    --primary-glow: 83 22% 38%;
-    --primary-muted: 142 20% 30%;
+    --primary-glow: 160 69% 14%;
+    --primary-muted: 160 30% 25%;
 
-    --secondary: 142 15% 92%;
-    --secondary-foreground: 142 32% 18%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 7%;
 
-    --muted: 142 12% 90%;
-    --muted-foreground: 142 15% 45%;
+    /* Very light gray for sections */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 83 22% 38%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 160 69% 14%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 142 18% 82%;
-    --input: 142 18% 82%;
-    --ring: 142 32% 18%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 160 69% 14%;
 
-    --radius: 0.375rem;
+    --radius: 0.25rem;
 
-    /* ── Design tokens ── */
-    --gradient-hero: linear-gradient(160deg, hsl(142 32% 14% / 0.96) 0%, hsl(142 32% 20% / 0.92) 60%, hsl(142 28% 26% / 0.85) 100%);
-    --gradient-green: linear-gradient(135deg, hsl(var(--primary)), hsl(83 22% 35%));
-    --gradient-section: linear-gradient(160deg, hsl(142 32% 16%), hsl(142 28% 22%));
-    --gradient-card: linear-gradient(145deg, hsl(142 18% 97%), hsl(142 14% 93%));
-    --shadow-green: 0 8px 40px -8px hsl(var(--primary) / 0.35);
-    --shadow-card: 0 4px 24px hsl(142 20% 60% / 0.12);
+    --font-display: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
 
-    /* Typography */
-    --font-display: 'Playfair Display', Georgia, serif;
-    --font-body: 'DM Sans', system-ui, sans-serif;
-
-    --sidebar-background: 142 32% 16%;
-    --sidebar-foreground: 0 0% 92%;
-    --sidebar-primary: 83 22% 38%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 142 28% 22%;
-    --sidebar-accent-foreground: 0 0% 92%;
-    --sidebar-border: 142 25% 28%;
-    --sidebar-ring: 83 22% 38%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 160 69% 14%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 160 69% 14%;
   }
 }
 
@@ -80,10 +71,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
-  h1, h2, h3 {
-    font-family: var(--font-display);
-  }
 }
 
 @layer utilities {
@@ -95,34 +82,11 @@
     font-family: var(--font-body);
   }
 
-  .gradient-green {
-    background: var(--gradient-green);
-  }
-
-  .gradient-hero {
-    background: var(--gradient-hero);
-  }
-
-  .gradient-section {
-    background: var(--gradient-section);
-  }
-
-  .shadow-green {
-    box-shadow: var(--shadow-green);
-  }
-
-  .text-gradient-green {
-    background: var(--gradient-green);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* Scroll-reveal utility */
+  /* Scroll-reveal */
   .reveal {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    transform: translateY(20px);
+    transition: opacity 0.55s ease-out, transform 0.55s ease-out;
   }
 
   .reveal.visible {
@@ -130,8 +94,8 @@
     transform: translateY(0);
   }
 
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
-  .reveal-delay-3 { transition-delay: 0.3s; }
-  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-1 { transition-delay: 0.08s; }
+  .reveal-delay-2 { transition-delay: 0.16s; }
+  .reveal-delay-3 { transition-delay: 0.24s; }
+  .reveal-delay-4 { transition-delay: 0.32s; }
 }
